@@ -21,7 +21,7 @@ fn parse_args(args: &Vec<String>) {
 
     let option = &args[0];
 
-    exec_option(option, &args)
+    exec_option(option, &args);
 }
 
 fn exec_option(option: &str, args: &Vec<String>) {
