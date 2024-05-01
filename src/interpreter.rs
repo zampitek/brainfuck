@@ -9,7 +9,6 @@ pub fn execute(program: &str) {
     start_executing(&tokens);
 }
 
-#[derive(Clone)]
 enum Token {
     IncreaseV,
     DecreaseV,
