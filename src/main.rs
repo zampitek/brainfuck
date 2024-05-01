@@ -36,6 +36,9 @@ fn exec_option(option: &str, args: &Vec<String>) {
         "-h" => {
             print_help();
         },
+        "-v" => {
+            print_version();
+        },
         _ => {
             println!("Invalid option {}.", option);
         }
@@ -61,7 +64,16 @@ fn print_help() {
     
 Options:
     -o <file_path>  Opens the specified file.
-    -h              Prints this help message."#);
+    -h              Prints this help message.
+    -v              Show version."#);
+}
+
+fn print_version() {
+    const VERSION: &str = env!("CARGO_PKG_VERSION");
+
+    println!(r#"Brainfuck Interpreter by Riccardo Zampieri
+    
+Version {}"#, VERSION);
 }
 
 fn idle() {
